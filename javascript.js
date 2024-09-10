@@ -1,18 +1,16 @@
-let userName = prompt("Who's there?", '');
-console.log(userName)
+let answer = prompt("Input a number", '');
 
-if(userName === "Admin") {
-    let password = prompt("Password?", '');
-
-    if(password === "" || password === null) {
-        alert("Cancelled");
-    } else if(password === "TheMaster") {
-        alert("Welcome!");
-    } else {
-        alert("Wrong password");
-    };
-} else if(userName === "" || userName === null) {
-    alert("Cancelled");
+if(answer < 0) {
+    alert(-1);
+} else if(answer > 0){
+    alert(1);
 } else {
-    alert("I don't know who you are");
+    alert(0);
 }
+
+let result = (a + b < 4) ? 'Below' : 'Over';
+
+let message = (login === 'Employee') ? 'Hello' :
+    (login === 'Director') ? 'Greetings':
+    (login === '') ? 'No login':
+    '';
