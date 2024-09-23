@@ -1,32 +1,34 @@
-function add7(a) {
-    return a + 7;
-}
+const container = document.querySelector("#container");
 
-let b = 5;
-console.log(b);
+const content = document.createElement("p");
+content.classList.add("content");
+content.textContent = "Hey I'm red!";
+content.style.color = "red";
 
-let c = add7(b);
-console.log(c);
+container.appendChild(content);
 
-function multiply(a, b) {
-    return a*b;
-}
+const moreContent = document.createElement("h3");
+moreContent.classList.add("moreContent");
+moreContent.textContent = "I'm a blue h3!";
+moreContent.style.color = "blue";
 
-let d = multiply(3, 2);
-console.log(d);
+container.appendChild(moreContent);
 
-function capitalize(word) {
-    let lowerWord = word.toLowerCase();
-    let capWord = lowerWord.charAt(0).toUpperCase() + lowerWord.slice(1);
-    return capWord;
-}
+const subContainer = document.createElement("div");
+subContainer.classList.add("subContainer");
+subContainer.style.border = "solid";
+subContainer.style.backgroundColor = "pink";
 
-let result = capitalize("jumPER");
-console.log(result);
+const headline = document.createElement("h1");
+headline.classList.add("headline");
+headline.textContent = "I'm in a div";
 
-function lastLetter(string) {
-    return string.slice(-1);
-}
+subContainer.appendChild(headline);
 
-let result2 = lastLetter("monkey");
-console.log(result2);
+const paragraph = document.createElement("p");
+// paragraph.classList.add("paragraph");
+paragraph.textContent = "ME TOO!";
+
+subContainer.appendChild(paragraph);
+
+container.appendChild(subContainer);
