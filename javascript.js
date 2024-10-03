@@ -11,7 +11,7 @@
 
 
 //"Object basics" problem (towards bottom of page)
-const array = [1, 2, 3, 4, 5];
+// const array = [1, 2, 3, 4, 5];
 
 // const filteredArray = array.filter((num) => {
 //   return num % 2 === 0;
@@ -26,17 +26,17 @@ const array = [1, 2, 3, 4, 5];
 // This method didn't work because the reduce array needs a return
 // for each number and the array only had a return for even numbers
 // **Fixed it with an else statement!**
-const sum = array.reduce((total, currentItem) => {
+// const sum = array.reduce((total, currentItem) => {
 
-  if(currentItem % 2 === 0) {
-    total += currentItem*3;
-    return total;
-  } else {
-    return total;
-  }
-}, 0);
+//   if(currentItem % 2 === 0) {
+//     total += currentItem*3;
+//     return total;
+//   } else {
+//     return total;
+//   }
+// }, 0);
 
-console.log(sum);
+// console.log(sum);
 
 // function sumOfTripledEvens(array) {
 //   return array
@@ -46,3 +46,8 @@ console.log(sum);
 // }
 
 // console.log(sumOfTripledEvens(array));
+
+const today = new Date();
+const thisYear = today.getFullYear();
+
+console.log(thisYear);
