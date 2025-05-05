@@ -47,7 +47,50 @@
 
 // console.log(sumOfTripledEvens(array));
 
-const today = new Date();
-const thisYear = today.getFullYear();
+// const today = new Date();
+// const thisYear = today.getFullYear();
 
-console.log(thisYear);
+// console.log(thisYear);
+
+// console.log("hello there!!")
+
+// function sumRange(num) {
+//     if(num === 1) return 1;
+//     return num + sumRange(num - 1);
+// }
+
+// let output = sumRange(5);
+// console.log(output);
+
+// function power(base, exp) {
+//     if(exp === 0) {
+//         return 1
+//     }
+//     return base * power(base, (exp - 1));
+// }
+
+// let output = power(2, 4);
+// console.log(output);
+
+
+// function factorial(num) {
+//     if(num === 1) return 1;
+//     return num * factorial(num - 1);
+// }
+
+// let output = factorial(5);
+// console.log(output);
+
+////////////////////////// Example 4
+// function all(arr, fn) {
+//     if ???????????????????????????????
+// }
+
+// const allAreLessThanSeven = all([1, 2, 9], function(num) {
+//     return num < 7;
+// })
+
+
+// console.log(allAreLessThanSeven);
+////////////////////////////
+
