@@ -94,3 +94,26 @@
 // console.log(allAreLessThanSeven);
 ////////////////////////////
 
+//const arr = []
+function fibsRec(num) {
+
+    if (num === 1) {
+        return [0];
+    } else if (num === 2) {
+        return [0, 1];
+    }
+
+    let sum = fibsRec(num - 1);
+    sum.push(sum[sum.length - 1] + sum[sum.length - 2]);
+    return sum;
+}
+//console.log(fibsRec(5));
+
+// num = 5 
+//     num = 4 
+//         num = 3 
+//             num = 2 
+//             [0, 1]
+//         [0, 1, 1]
+//     [0, 1, 1, 2]
+// [0, 1, 1, 2, 3]
