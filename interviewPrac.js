@@ -104,6 +104,104 @@ function flatten(arr) {
     return newArr;
 }
 
-console.log(flatten([1, 2, [3, 4], 5]));       
-console.log(flatten([1, [2, 3], [4, 5], 6]));  
-console.log(flatten([1, [2, [3, 4]], 5]));
+// console.log(flatten([1, 2, [3, 4], 5]));       
+// console.log(flatten([1, [2, 3], [4, 5], 6]));  
+// console.log(flatten([1, [2, [3, 4]], 5]));
+
+function removeDoubles (arr) {
+    const counter = {};
+    const newArr = [];
+    for(let i = 0; i < arr.length; i++) {
+        if(!counter.hasOwnProperty(arr[i])) {
+            counter[arr[i]] = 1;
+        }
+    }
+
+    for(let i in counter) {
+        if(counter[i] === 1) {
+            newArr.push(parseInt(i));
+        }
+    }
+    return newArr;
+}
+
+//console.log(removeDoubles([4, 2, 7, 2, 5, 7, 1]))
+
+class Pin {
+    #imageURL;
+    #description;
+    #likes;
+
+    constructor(imageURL, description) {
+        this.#imageURL = imageURL;
+        this.#description = description;
+        this.#likes = 0;
+    }
+
+    getDescription() {
+        return this.#description;
+    }
+
+    getImageURL() {
+        return this.#imageURL;
+    }
+
+    getLikes() {
+        return this.#likes;
+    }
+
+    like() {
+        this.#likes += 1;
+    }
+
+    setDescription(newDescription) {
+        this.#description = newDescription;
+    }
+
+    setImageURL(newURL) {
+        this.#imageURL = newURL;
+    }
+
+    getSummary() {
+        return `Summary - ImageURL: ${this.getImageURL()}, Description: ${this.getDescription()}, Likes: ${this.getLikes()}`
+    }
+}
+
+const pin1 = new Pin("https://example.com/cake.jpg", "Delicious chocolate cake!");
+console.log(pin1.getDescription());  // ➜ "Delicious chocolate cake!"
+pin1.setDescription("Eww. That cake is gross.")
+console.log(pin1.getDescription());
+pin1.like();
+pin1.like();
+pin1.like();
+pin1.like();
+console.log(pin1.getLikes());
+console.log(pin1.getSummary())
+
+const pins = [
+  new Pin("url1", "desc1"),
+  new Pin("url2", "desc2")
+];
+
+pins[0].like();
+pins[0].like();
+pins[0].like();
+pins[1].like();
+pins[1].like();
+
+console.log(pins[0].getLikes());
+
+function findMaxLikes (arr) {
+    //return the index of the first pin with the most likes
+    let maxLikes = 0;
+    let index = -1;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].getLikes() > maxLikes) {
+            maxLikes = arr[i].getLikes();
+            index = i;
+        }
+    }
+    return index;
+}
+
+console.log(findMaxLikes(pins))
